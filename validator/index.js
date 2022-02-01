@@ -15,7 +15,7 @@ export const validateUserCreate = async (req, res, next) => {
 
     const { error } = UserSchema.validate(req.body);
     if (error) return res.status(401).json({
-        error: 'invalid input values',
+        error,
         data: null,
         status: 401,
         success: false

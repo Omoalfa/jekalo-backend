@@ -12,6 +12,10 @@ app.use(bodyParser.json());
 
 app.use('/api', userRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Welcome Onboard!')
+})
+
 mongoose.connect(config.db_uri);
 mongoose.connection.on('open', () => {
     console.log('Database connection for sunny..')

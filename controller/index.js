@@ -12,9 +12,11 @@ export const createUser = async (req, res) => {
 
         await user.save();
 
+        const dob = moment(user.date_of_birth).format('DD-MM-YYYY');
+
         return res.status(201).json({
             message: 'account created succcessfully',
-            data: user,
+            data: { ...user, date_of_birth: dob },
             status: 201,
             success: true
         })
