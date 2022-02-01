@@ -1,0 +1,37 @@
+{
+  "name": "jekalo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha -r @babel/register -r regenerator-runtime/runtime --timeout 20000 test/*.spec.js --recursive --exit",
+    "start": "babel-node index.js",
+    "dev": "nodemon --exec babel-node index.js"
+  },
+  "author": "Omoalfa",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/node": "^7.16.8",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/joi-date": "^2.0.1",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^15.0.0",
+    "env": "0.0.2",
+    "express": "^4.17.2",
+    "joi": "^17.6.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.1.9",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^9.2.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
